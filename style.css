@@ -15,6 +15,35 @@ html, body {
   
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+}
+
+/* Altura relativa: 15% para o topo, 70% para o jogo, 15% para os botões */
+#top-section {
+  flex: 0 0 15%;
+  background-color: #d0ffd0; /* verde claro para distinguir */
+  border-bottom: 2px solid #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+#middle-section {
+  flex: 1; /* ocupa o espaço restante */
+  background-color: #aaffaa;
+  border-top: 2px solid #555;
+  border-bottom: 2px solid #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+#bottom-section {
+  flex: 0 0 15%;
+  background-color: #d0ffd0;
+  border-top: 2px solid #555;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
