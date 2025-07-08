@@ -214,4 +214,4 @@ function pintarParedesPretas(cellMatrix, numRows, numCols) {
 window.addEventListener('load', gerarGridDinamico);
 
 // Recalcula ao redimensionar
-window.addEventListener('resize', gerarGridDinamico);
+//window.addEventListener('resize', gerarGridDinamico);
