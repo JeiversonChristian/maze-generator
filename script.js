@@ -5,7 +5,7 @@ function gerarGridDinamico() {
   middleSection.innerHTML = '';
 
   // Define tamanho desejado do quadrado (em pixels)
-  const targetCellSize = window.innerWidth * 0.025;
+  const targetCellSize = 50;
 
   // Descobre o tamanho REAL da área de jogo
   const width = middleSection.clientWidth;
