@@ -2,7 +2,7 @@ function gerarGridDinamico() {
   const middleSection = document.getElementById('middle-section');
   middleSection.innerHTML = '';
 
-  const targetCellSize = 50;
+  const targetCellSize = 30;
   const width = middleSection.clientWidth;
   const height = middleSection.clientHeight;
 
