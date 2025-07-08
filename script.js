@@ -40,4 +40,4 @@ function gerarGridDinamico() {
 window.addEventListener('load', gerarGridDinamico);
 
 // Recalcula quando redimensiona a janela
-window.addEventListener('resize', gerarGridDinamico);
+//window.addEventListener('resize', gerarGridDinamico);
