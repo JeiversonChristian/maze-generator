@@ -2,7 +2,14 @@ function gerarGridDinamico() {
   const middleSection = document.getElementById('middle-section');
   middleSection.innerHTML = '';
 
-  const targetCellSize = 30;
+  // Escolhe tamanho dependendo do dispositivo
+  let targetCellSize;
+  if (window.innerWidth <= 768) {
+    targetCellSize = 20;
+  } else {
+    targetCellSize = 30;
+  }
+  
   const width = middleSection.clientWidth;
   const height = middleSection.clientHeight;
 
