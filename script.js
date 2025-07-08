@@ -21,6 +21,12 @@ function gerarGridDinamico() {
   middleSection.style.gridTemplateColumns = `repeat(${numCols}, 1fr)`;
   middleSection.style.gridTemplateRows = `repeat(${numRows}, 1fr)`;
 
+  // Escolhe colunas aleatórias para a primeira e a última linha
+  const randomStartCol = Math.floor(Math.random() * numCols);
+  const randomEndCol = Math.floor(Math.random() * numCols);
+
+  //console.log(`StartCol: ${randomStartCol}, EndCol: ${randomEndCol}`);
+
   // Cria as células com atributos i,j
   for (let i = 0; i < numRows; i++) {
     for (let j = 0; j < numCols; j++) {
@@ -30,6 +36,16 @@ function gerarGridDinamico() {
       // Atribui os dados de posição
       cell.dataset.row = i;
       cell.dataset.col = j;
+
+      // Verifica se é a célula da primeira linha escolhida
+      if (i === 0 && j === randomStartCol) {
+        cell.style.backgroundColor = 'green';
+      }
+
+      // Verifica se é a célula da última linha escolhida
+      if (i === numRows - 1 && j === randomEndCol) {
+        cell.style.backgroundColor = 'red';
+      }
 
       middleSection.appendChild(cell);
     }
