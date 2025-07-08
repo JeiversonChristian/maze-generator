@@ -21,11 +21,18 @@ function gerarGridDinamico() {
   middleSection.style.gridTemplateColumns = `repeat(${numCols}, 1fr)`;
   middleSection.style.gridTemplateRows = `repeat(${numRows}, 1fr)`;
 
-  // Cria as células
-  for (let i = 0; i < numRows * numCols; i++) {
-    const cell = document.createElement('div');
-    cell.classList.add('grid-cell');
-    middleSection.appendChild(cell);
+  // Cria as células com atributos i,j
+  for (let i = 0; i < numRows; i++) {
+    for (let j = 0; j < numCols; j++) {
+      const cell = document.createElement('div');
+      cell.classList.add('grid-cell');
+
+      // Atribui os dados de posição
+      cell.dataset.row = i;
+      cell.dataset.col = j;
+
+      middleSection.appendChild(cell);
+    }
   }
 }
 
