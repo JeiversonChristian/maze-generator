@@ -5,7 +5,7 @@ function gerarGridDinamico() {
   middleSection.innerHTML = '';
 
   // Define tamanho desejado do quadrado (em pixels)
-  const targetCellSize = 50;
+  const targetCellSize = window.innerWidth * 0.025;
 
   // Descobre o tamanho REAL da área de jogo
   const width = middleSection.clientWidth;
@@ -15,7 +15,7 @@ function gerarGridDinamico() {
   const numCols = Math.floor(width / targetCellSize);
   const numRows = Math.floor(height / targetCellSize);
 
-  console.log(`Cols: ${numCols}, Rows: ${numRows}`);
+  //console.log(`Cols: ${numCols}, Rows: ${numRows}`);
 
   // Define o grid com CSS
   middleSection.style.gridTemplateColumns = `repeat(${numCols}, 1fr)`;
